@@ -1,5 +1,5 @@
-import * as SQLite from 'expo-sqlite';
 import type { Category, Product } from '@/types';
+import * as SQLite from 'expo-sqlite';
 
 export type ProductRow = {
   id: string;
@@ -76,7 +76,7 @@ export function getAllProducts(): Product[] {
     variant: row.variant ?? '',
   }));
 }
-
+//hellow words
 export function searchProducts(query: string): Product[] {
   const db = openDb();
   const q = `%${query.trim()}%`;
